@@ -1,7 +1,7 @@
 export class Todo {
     id: number;
     task: String = '';
-    isDone: boolean;
+    isDone: boolean = false;
 
     constructor(values: Object = {}) {
         Object.assign(

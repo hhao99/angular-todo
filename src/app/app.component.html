@@ -1,8 +1,36 @@
-<img width="30" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<mat-toolbar>
+    <mat-icon>assignment</mat-icon>
+    <mat-menu #appMenu="matMenu">
+      <button (click)="onAbout()" mat-menu-item><mat-icon>help</mat-icon>About</button>
+      <button mat-menu-item><mat-icon>dock</mat-icon>Help</button>
+    </mat-menu>
+    
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <h3>Todo Demo App</h3>
+</mat-toolbar>
+
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <app-todo-input (add)="onAddTodo($event)"></app-todo-input>
-  <app-todo-list [todos]="todo_list"></app-todo-list>
-  </div>
+    <mat-card>
+        <h1>
+          Welcome to {{ title }}!
+        </h1>
+    </mat-card>
+  
+    <mat-card>
+        <app-todo-input (add)="onAddTodo($event)"></app-todo-input>
+ 
+    </mat-card>
+    <mat-card>
+        <app-todo-list [todos]="todo_list"></app-todo-list>
+
+    </mat-card>
+
+    <mat-card>
+       <h5>{{message}}</h5>
+    </mat-card>
+    
+    </div>
+
+ 

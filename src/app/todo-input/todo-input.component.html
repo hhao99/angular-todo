@@ -1,7 +1,10 @@
 <div class="todo-input">
-  <label>new todo:
+  <label>
+    <mat-icon>event_note</mat-icon>
+    
     <input class="new-todo"  placeholder='new todo'
     [(ngModel)]="newTodo.task"
-    (keyup.enter)="addTodo()"/>
+    (keyup.enter)="addTodo()" >
+    <mat-icon (click)="addTodo()">add</mat-icon>
   </label>
 </div>
